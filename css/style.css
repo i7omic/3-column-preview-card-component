@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+body .container {
+  height: 500px;
+  width: 920px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+}
+body .container .col1, body .container .col3, body .container .col2 {
+  width: 307px;
+  height: 100%;
+  padding: 48px;
+  background-color: #E28625;
+}
+body .container .col1 .txt-cont, body .container .col3 .txt-cont, body .container .col2 .txt-cont {
+  padding-top: 35px;
+}
+body .container .col1 .txt-cont .heading, body .container .col3 .txt-cont .heading, body .container .col2 .txt-cont .heading {
+  color: #F2F2F2;
+  font-family: "Big Shoulders Display";
+  font-size: 40px;
+  font-weight: 700;
+}
+body .container .col1 .txt-cont .paragraph, body .container .col3 .txt-cont .paragraph, body .container .col2 .txt-cont .paragraph {
+  padding-top: 25px;
+  color: #F2F2F2;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  line-height: 25px;
+  opacity: 0.75;
+}
+body .container .col1 .btn-cont, body .container .col3 .btn-cont, body .container .col2 .btn-cont {
+  padding-top: 83px;
+}
+body .container .col1 .btn-cont .btn, body .container .col3 .btn-cont .btn, body .container .col2 .btn-cont .btn {
+  border-radius: 25px;
+  background-color: #F2F2F2;
+  color: #E28625;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  line-height: 25px;
+  border: none;
+  width: 146px;
+  height: 48px;
+  cursor: pointer;
+}
+body .container .col1 .btn-cont .btn:active, body .container .col3 .btn-cont .btn:active, body .container .col2 .btn-cont .btn:active {
+  background-color: #E28625;
+  color: #fff;
+  border: 2px solid #fff;
+}
+body .container .col2 {
+  background-color: #006971;
+}
+body .container .col2 .btn-cont .btn {
+  color: #006971;
+}
+body .container .col2 .btn-cont .btn:active {
+  background-color: #006971;
+}
+body .container .col3 {
+  background-color: #004140;
+}
+body .container .col3 .btn-cont .btn {
+  color: #004140;
+}
+body .container .col3 .btn-cont .btn:active {
+  background-color: #004140;
+}
+
+@media (max-width: 375px) {
+  body {
+    height: unset;
+  }
+  body .container {
+    flex-direction: column;
+    width: unset;
+    height: unset;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

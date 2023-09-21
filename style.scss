@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bg-body: #F2F2F2;
+$bg-col1: #E28625;
+$bg-col2: #006971;
+$bg-col3: #004140;
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-body;
+
+    .container {
+        height: 500px;
+        width: 920px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+
+        .col1 {
+            width: 307px;
+            height: 100%;
+            padding: 48px;
+            background-color: $bg-col1;
+            
+            .txt-cont {
+                padding-top: 35px;
+
+                .heading {
+                    color: $bg-body;
+                    font-family: 'Big Shoulders Display';
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+
+                .paragraph {
+                    padding-top: 25px;
+                    color: $bg-body;
+                    font-family: 'Lexend Deca';
+                    font-weight: 400;
+                    line-height: 25px;
+                    opacity: 0.75;
+                }
+            }
+
+            .btn-cont {
+                padding-top: 83px;
+
+                .btn {
+                    border-radius: 25px;
+                    background-color: $bg-body;
+                    color: $bg-col1;
+                    font-family: 'Lexend Deca';
+                    font-weight: 400;
+                    line-height: 25px;
+                    border: none;
+                    width: 146px;
+                    height: 48px;
+                    cursor: pointer;
+
+                    &:active {
+                        background-color: $bg-col1;
+                        color: #fff;
+                        border: 2px solid #fff;
+                    }
+                }
+            }
+        }
+        .col2 {
+            @extend .col1;
+            background-color: $bg-col2; 
+
+            .btn-cont {
+                .btn {
+                    color: $bg-col2;
+                    
+                    &:active {
+                        background-color: $bg-col2;
+                    }
+                }
+            }
+        }
+        .col3 {
+            @extend .col1;
+            background-color: $bg-col3; 
+
+            .btn-cont {
+                .btn {
+                    color: $bg-col3;
+                    
+                    &:active {
+                        background-color: $bg-col3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        height: unset;
+
+        .container {
+            flex-direction: column;
+            width: unset;
+            height: unset;
+        }
+    }
+}
